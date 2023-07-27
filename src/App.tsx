@@ -4,6 +4,7 @@ import api from "./Api";
 import Cards from "./components/Cards";
 function App() {
   const [products, setProducts] = useState<Products[]>([]);
+
   useEffect(() => {
     const fetchData = () => {
       try {

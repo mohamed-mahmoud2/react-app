@@ -1,0 +1,59 @@
+{
+	"api": "https://www.google.com",
+	"title": "Product Catalog",
+	"description": "This is test desc",
+	"subtitle": "This form to add new prod",
+	"inputs": [
+		{
+			"name": "name",
+			"placeholder": "Enter product's name",
+			"type": "text",
+			"value":"Prod 1",
+			"validation": [
+				{
+					"type": "required",
+					"errormsg": "Please enter the product name"
+				},
+				{
+					"type": "regx",
+					"errormsg": "Please enter a valid name",
+					"expression": "/^\\w$/g"
+				}
+			]
+		},
+		{
+			"name": "email",
+			"placeholder": "Enter an email",
+			"type": "text",
+			"value":"ex@example.com",
+			"validation": [
+				{
+					"type": "required",
+					"errormsg": "Please enter your email"
+				},
+				{
+					"type": "regx",
+					"errormsg": "Please enter a valid email",
+					"expression": "/^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$/g"
+				}
+			]
+		},
+		{
+			"name": "price",
+			"placeholder": "Enter an price",
+			"type": "int",
+			"value":"100",
+			"validation": [
+				{
+					"type": "required",
+					"errormsg": "Please enter the product price"
+				},
+				{
+					"type": "regx",
+					"errormsg": "Please enter a valid price",
+					"expression": "/^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$/g"
+				}
+			]
+		}
+	]
+}
